@@ -4,6 +4,14 @@
   <artifactId>com.fun</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  <dependencies>
+  <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.0.1</version>
+        <scope>provided</scope>
+</dependency>
+</dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -22,7 +30,8 @@
           <warSourceDirectory>WebContent</warSourceDirectory>
         </configuration>
       </plugin>
+      
     </plugins>
   </build>
-  
+
 </project>
