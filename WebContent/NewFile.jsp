@@ -58,7 +58,7 @@
 <form  action="Controller" method="post" name="form" >  
 Userid       :<input type="text" name="userid"><br>  
 Password:<input type="password" name="password"><br>  
-<input type="submit" value="login" onClick="change1('state')">
+<input type="submit" value="loginLogin" onClick="change1('state')">
 <input type="submit" value="signup" onClick="change2('state')">
 <input type="submit" value="update password" onClick="change3('state')">
 <input type="submit" value="view employees" onClick="change4('state')">
