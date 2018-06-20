@@ -134,15 +134,16 @@ public boolean check() throws Exception
   while (resultSet.next()) {
     count++;
   }
+  con.close();
 	if(count>=1)
 	{
 	return true;
 	}
 	else
 		return false;
-}
+
 
 }
 	
-
+}
 
