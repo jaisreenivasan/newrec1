@@ -95,7 +95,7 @@ public void create() throws Exception
 		    //statement = con.createStatement();
             
 		    preparedStatement = con
-		        .prepareStatement("insert into  login.user (userid,first_name,last_name,designation,date,password) values(?,?,?,?,?,?)");
+		        .prepareStatement("insert into  myDb.user (userid,first_name,last_name,designation,date,password) values(?,?,?,?,?,?)");
 		    preparedStatement.setString(1,userid);
 		    preparedStatement.setString(2,fname);
 		    preparedStatement.setString(3,lname);
@@ -113,7 +113,7 @@ public void update() throws Exception
 		    //statement = con.createStatement();
 
 		    preparedStatement = con
-		        .prepareStatement("update login.user set password=? where userid=?");
+		        .prepareStatement("update myDb.user set password=? where userid=?");
 		    preparedStatement.setString(1,password);
 		    preparedStatement.setString(2,userid);
 		   preparedStatement.executeUpdate();
@@ -125,7 +125,7 @@ public int printcount() throws Exception
 Class.forName(driverClassName);
 con= DriverManager.getConnection(url,username,passwd);
 preparedStatement = con
-.prepareStatement("select userid,first_name,last_name,date,designation from login.user");
+.prepareStatement("select userid,first_name,last_name,date,designation from myDb.user");
 ResultSet rs=preparedStatement.executeQuery();
 int i=0;
 while (rs.next())
@@ -140,7 +140,7 @@ public void assign(int i) throws Exception
 { Class.forName(driverClassName);
 con= DriverManager.getConnection(url,username,passwd);
 preparedStatement = con
-.prepareStatement("select userid,first_name,last_name,date,designation from login.user");
+.prepareStatement("select userid,first_name,last_name,date,designation from myDb.user");
 ResultSet rs=preparedStatement.executeQuery();
 
 for(int j=0;j<i;j++)
