@@ -16,11 +16,6 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/eclipse-workspace/com.fun/mysql-connector-java-5.1.46-bin.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/cglib-nodep-3.2.6.jar"/>
 	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/easymock-3.6.jar"/>
@@ -43,5 +38,26 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jackson-core-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jackson-jaxrs-1.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jackson-mapper-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jackson-xc-1.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jersey-apache-client-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jersey-atom-abdera-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jersey-client-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jersey-core-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jersey-guice-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jersey-json-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jersey-multipart-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jersey-server-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jersey-servlet-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jersey-simple-server-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jersey-spring-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jettison-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/oauth-client-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/oauth-server-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/oauth-signature-1.19.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

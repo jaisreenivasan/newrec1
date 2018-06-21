@@ -13,9 +13,14 @@ public class Model {
 	public PreparedStatement preparedStatement = null;
 	public ResultSet resultSet = null;
 
-public String url="jdbc:mysql://localhost:3306/login";
+/*public String url="jdbc:mysql://localhost:3306/login";
 public String username="root";
 public String passwd = "jaisreenivasan";
+*/
+	public String	driverClassName="org.h2.Driver";
+			public String		url="jdbc:h2:mem:myDb;DB_CLOSE_DELAY=-1";
+					public String		username="sa";
+							public String	passwd="sa";
 public String getfName() {  
     return fname;  
 } 
@@ -56,7 +61,7 @@ return password;
 
 public void create() throws Exception
 {
-		    Class.forName("com.mysql.jdbc.Driver");
+		    Class.forName(driverClassName);
 		    con= DriverManager.getConnection(url,username,passwd);
 		    //statement = con.createStatement();
 
