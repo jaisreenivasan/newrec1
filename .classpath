@@ -59,5 +59,6 @@
 	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/oauth-client-1.19.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/oauth-server-1.19.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/Downloads/jerseyjar/oauth-signature-1.19.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jsreenivasanaj/.m2/repository/com/h2database/h2/1.4.194/h2-1.4.194.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
 
+
 public class Model { 
 	public String fname,lname,password,desig,userid,dob;
 	public Connection con = null;
@@ -19,7 +20,7 @@ public String username="root";
 public String passwd = "jaisreenivasan";
 */
 	public  String	driverClassName="org.h2.Driver";
-			public String		url="jdbc:h2:mem:myDb;DB_CLOSE_DELAY=-1";
+			public String		url="jdbc:h2:./MYDB;DB_CLOSE_DELAY=-1";
 					public String		username="sa";
 							public String	passwd="sa";
 public String getfName() {  
@@ -63,39 +64,27 @@ public  void initialize() throws Exception
 {
 	Class.forName(driverClassName);
     con= DriverManager.getConnection(url,username,passwd);
-   // preparedStatement = con
-	 ////       .prepareStatement("create database login");
-    //ResultSet rs=
-    //preparedStatement.executeQuery();
-	//if(rs.getWarnings().toString()=="ERROR 1007 (HY000): Can't create database 'login'; database exists")
-		//	{preparedStatement = con
-	      //  .prepareStatement("create database login");
-			//preparedStatement.executeQuery();
-			//}
-	//else
-    //{
-   preparedStatement = con
-    .prepareStatement("use myDb");
-    	
-   // }
     preparedStatement = con
-	        .prepareStatement("CREATE TABLE IF NOT EXISTS  user (first_name varchar(40),last_name varchar(40),date date,designation varchar(40),userid varchar(40),password varchar(40),primary key(userid));");
+    		   .prepareStatement("CREATE SCHEMA IF NOT EXISTS MYDB ");
+    		   preparedStatement.execute();
+  preparedStatement = con
+   .prepareStatement("use MYDB");
+   preparedStatement.execute();
+    preparedStatement = con
+	        .prepareStatement("CREATE TABLE IF NOT EXISTS  MYDB.user (first_name varchar(40),last_name varchar(40),date date,designation varchar(40),userid varchar(40),password varchar(40),primary key(userid));");
   
 		preparedStatement.execute();
-		//rs=preparedStatement.executeQuery();
-		//if(rs.getWarnings().toString()=="ERROR 1050 (42S01): Table 'user' already exists")
-		//{
-		//}
+		
 	
 }
 public void create() throws Exception
-{           this.initialize();
-		    Class.forName(driverClassName);
-		    con= DriverManager.getConnection(url,username,passwd);
+{           
+		    
+		    this.initialize();
 		    //statement = con.createStatement();
             
 		    preparedStatement = con
-		        .prepareStatement("insert into  myDb.user (userid,first_name,last_name,designation,date,password) values(?,?,?,?,?,?)");
+		        .prepareStatement("insert into  MYDB.user (userid,first_name,last_name,designation,date,password) values(?,?,?,?,?,?)");
 		    preparedStatement.setString(1,userid);
 		    preparedStatement.setString(2,fname);
 		    preparedStatement.setString(3,lname);
@@ -107,13 +96,11 @@ public void create() throws Exception
 
   }
 public void update() throws Exception
-{this.initialize();
-		    Class.forName(driverClassName);
-		    con= DriverManager.getConnection(url,username,passwd);
-		    //statement = con.createStatement();
-
+{
+		    
+		    this.initialize();
 		    preparedStatement = con
-		        .prepareStatement("update myDb.user set password=? where userid=?");
+		        .prepareStatement("update MYDB.user set password=? where userid=?");
 		    preparedStatement.setString(1,password);
 		    preparedStatement.setString(2,userid);
 		   preparedStatement.executeUpdate();
@@ -121,11 +108,10 @@ public void update() throws Exception
 
   }
 public int printcount() throws Exception
-{ this.initialize();
-Class.forName(driverClassName);
-con= DriverManager.getConnection(url,username,passwd);
+{ 
+this.initialize();
 preparedStatement = con
-.prepareStatement("select userid,first_name,last_name,date,designation from myDb.user");
+.prepareStatement("select userid,first_name,last_name,date,designation from MYDB.user");
 ResultSet rs=preparedStatement.executeQuery();
 int i=0;
 while (rs.next())
@@ -137,10 +123,10 @@ con.close();
 return i;
 }
 public void assign(int i) throws Exception
-{ Class.forName(driverClassName);
-con= DriverManager.getConnection(url,username,passwd);
+{ 
+this.initialize();
 preparedStatement = con
-.prepareStatement("select userid,first_name,last_name,date,designation from myDb.user");
+.prepareStatement("select userid,first_name,last_name,date,designation from MYDB.user");
 ResultSet rs=preparedStatement.executeQuery();
 
 for(int j=0;j<i;j++)
@@ -155,11 +141,11 @@ con.close();
 
 
 public boolean check() throws Exception
-{   this.initialize();
-	Class.forName(driverClassName);
-    con= DriverManager.getConnection(url,username,passwd);
+{  
+	
+    this.initialize();
     //statement  = con.createStatement();
-    String sql="select * from user where userid=? and password=?";
+    String sql="select * from MYDB.user where userid=? and password=?";
     preparedStatement=con.prepareStatement(sql);
     preparedStatement.setString(1,userid);
     preparedStatement.setString(2,password);
